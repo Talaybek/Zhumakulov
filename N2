@@ -1,0 +1,3 @@
+tseloe = 10
+big_netseloe = tseloe * 3.5
+print (big_netseloe)
