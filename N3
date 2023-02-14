@@ -1,0 +1,3 @@
+drobnoe = 8.4
+big_netseloe = drobnoe - 1
+print (big_netseloe)
