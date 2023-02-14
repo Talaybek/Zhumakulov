@@ -1,0 +1,2 @@
+stroka = "No" * 2 + "_" + "Yes" * 3
+print (stroka)
