@@ -1,0 +1,8 @@
+num1 = 11
+num2 = 6
+num1 > 7 and num2 != 10 True
+num1 == 12 and num2 ==6 False
+num1 != 2 and num2 != 9 True
+num1 == 11 and num2 < 6 False
+num1 == 11 or num2 != 6 True
+num1 != 11 or num2 > 6 False
