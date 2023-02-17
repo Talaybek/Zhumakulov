@@ -1,0 +1,11 @@
+a = 9
+if a >= 10:
+    m = a + 10
+    if m >= 20:
+        l = m + 10
+        print (l)
+else:
+    n = a + 123
+    if n > 123:
+        p = n - 100
+        print (p)
