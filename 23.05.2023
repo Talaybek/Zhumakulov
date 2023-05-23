@@ -1,0 +1,37 @@
+def zahadka():
+    LIFE=1
+    while LIFE<=5:
+        while LIFE<=5:
+            print("Загадка 1: не песок, сладок")
+            answer1 = input()
+            if answer1.lower() == "сахар":
+                print("Верно")
+                while LIFE<=5:
+                    print("Загадка 2: коричневое, продолговатое, не тонет")
+                    answer2 = input()
+                    if answer2.lower() == "бревно":
+                        print("Верно")
+                        while LIFE<=5:
+                            print("Загадка 3: не человек, чёрт")
+                            answer3 = input()
+                            if answer3.lower() == "Артемий":
+                                print("Верно")
+                            else:
+                                print("Неверно")
+                                print(LIFE, "использована попыток из пяти для этой загадкиа")
+                                LIFE+=1
+                                if LIFE>=5:
+                                    print("LIFE кончились")
+                    else:
+                        print("Неверно")
+                        print(LIFE, "использована попыток из пяти для этой загадки")
+                        LIFE+=1
+                        if LIFE>=5:
+                            print("LIFE кончились")
+            else:
+                print("Неверно")
+                print(LIFE, "использована попыток из пяти для этой загадки")
+                LIFE+=1
+            if LIFE>=5:
+                print("LIFE кончились")
+zahadka()
