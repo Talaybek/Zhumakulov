@@ -1,30 +1,25 @@
-def zahadka():
-    LIFE=0
-    while LIFE<7:
-        print("Загадка 1: не песок, сладок")
-        answer1 = input()
-        if answer1.lower() == "сахар":
-            print("Верно")
+from math import pi, sin, cos
 
+arr = [int(x) for x in "0123456789"]
+for y in "0123456789":
+    if y != "0":
+        for c in "0123456789":
+            arr.append(int(y+c))
+            for v in "0123456789":
+                arr.append(int(y+c+v))
+arr = sorted(arr)
+arr = str(arr)
+
+a = input("Введите значение x: ")
+
+while a not in arr or a == "":
+        if a == "":
+            a = input("Вы ничего не ввели, попробуйте еще раз: ")
         else:
-            print("Неверно")
-            print(LIFE,"использовано попыток из семи для этой загадки")
-        print("Загадка 2: коричневое, продолговатое, не тонет")
-        answer2 = input()
-        if answer2.lower() == "бревно":
-            print("Верно")
-            break
-        else:
-            print("Неверно")
-            print(LIFE,"использовано попыток из семи для этой загадки")
-        print("Загадка 3: не человек, чёрт")
-        answer3 = input()
-        if answer3.lower() == "Артемий":
-            print("Верно")
-            break
-        else:
-            print("Неверно")
-            print(LIFE,"использовано попыток из семи для этой загадкиа")
-            LIFE+=1
-            if LIFE>=5:
-                print("LIFE кончились")
+            a = input("Неверный тип данных, ведите значение в числовом типе: ")
+
+a = int(a)
+if a <= pi / 4:
+    print(f"y = sinx  y = {sin(a)}")
+else:
+    print(f"y = cosx  y = {cos(a)}")
