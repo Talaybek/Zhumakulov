@@ -1,0 +1,2 @@
+def guess(colours, guesses, hats):
+    return colours[-sum(colours.index(c) for c in guesses+hats) % len(colours)]
