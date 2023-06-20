@@ -1,0 +1,8 @@
+def count_rooms(Ps): 
+    for i in range(2): 
+        if len(Ps[i][0])==1: 
+            return sum(map(sum,Ps[i^1])) 
+         
+    return sum( sum( sum( i and v for i,v in enumerate(row))  
+                     for row in face) 
+                for face in Ps)
