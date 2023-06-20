@@ -1,0 +1,11 @@
+def flip_pancakes(stack): 
+    tp, st, res = len(stack) - 1, stack[:], [] 
+     
+    while tp > 0: 
+        if st[tp] != max(st[:tp+1]): 
+            ind = max(range(tp+1), key=lambda k: st[k]) 
+            st = st[ind+1:tp+1][::-1] + st[:ind+1] + st[tp+1:] 
+            res.extend([ind]*(ind > 0) + [tp]) 
+        tp -= 1 
+     
+    return res
