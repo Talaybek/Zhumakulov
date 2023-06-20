@@ -1,0 +1,6 @@
+from inspect import ismethod 
+ 
+class Setting: 
+    def __getattribute__(self, name): 
+        attr = super().__getattribute__(name) 
+        return attr() if callable(attr) and not ismethod(attr) else attr
