@@ -1,0 +1,5 @@
+ELEMENTS = {'-': 0, 'c': 2.5, 'R': 25, 'B': 20, 'Y': 15, 'G': 10, 'W': 5, 'r': 2.5, 'b': 2, 'y': 1.5, 'g': 1, 'w': 0.5,}
+BAR = 20
+
+def barbell_weight(barbell):
+    return BAR + sum(map(ELEMENTS.__getitem__, barbell))
