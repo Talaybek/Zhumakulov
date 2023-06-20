@@ -1,0 +1,1 @@
+f=lambda x,y:(y-x).bit_length()
