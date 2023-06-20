@@ -1,0 +1,5 @@
+def lfsr(size, pos, seed): 
+    mask = sum(1 << i for i in pos) 
+    while True: 
+        yield seed 
+        seed = seed >> 1 | ((seed & mask).bit_count() & 1) << size - 1
